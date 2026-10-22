@@ -16,14 +16,11 @@ The added optional fields are `serviceKey`, `journeyNeeds`, `travelWindow`, and
 Apply `drizzle/0000_create_leads.sql` and then `drizzle/0001_add_journey_request.sql`
 for a new database. Existing databases only need migration 0001.
 
-The current local frontend is a preview: `lead-config.js` has an empty endpoint.
-No database is configured on the inspected PALM Site yet. Before collecting
-real enquiries, deploy this API with a D1 binding named `DB`, set
-`ALLOWED_ORIGIN` to the exact published frontend origin, and set
-`window.PALM_LEAD_ENDPOINT` in `lead-config.js` to the verified `/api/leads` URL.
-For a different API origin, add that exact origin to the frontend CSP's
-`connect-src`. The standalone CanvasCode HTML deliberately blocks network
-submissions and is for preview only. Do not use it as the production frontend.
+The published frontend uses the verified API and D1 database. See
+`../DEPLOYMENT.md` for production URLs and binding configuration. The standalone
+CanvasCode HTML remains preview-only. Local design previews should use an empty
+endpoint; production accepts the exact official site origin. Email notifications
+are not configured, and there is no standalone admin login page.
 
 Run tests with Node 24 or later: `node --test tests/worker.test.mjs`.
 Tests use fictional contacts, including a real in-memory SQLite write with both

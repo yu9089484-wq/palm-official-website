@@ -5,6 +5,14 @@ import { DatabaseSync } from 'node:sqlite';
 import { readFileSync } from 'node:fs';
 
 const origin = 'https://palm.example';
+test('rejects oversized and non-object request bodies before insertion', async () => {
+  for (const [body, expected] of [['null', 400], ['[]', 400], [JSON.stringify({name: 'x'.repeat(21000)}), 413]]) {
+    const response = await worker.fetch(new Request('https://api.example/api/leads', {
+      method: 'POST', headers: { origin, 'content-type': 'application/json' }, body
+    }), { ALLOWED_ORIGIN: origin, DB: { prepare() { throw new Error('Must not insert'); } } });
+    assert.equal(response.status, expected);
+  }
+});
 const createEnv = () => {
   const inserts = [];
   return {

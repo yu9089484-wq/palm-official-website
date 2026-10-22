@@ -46,9 +46,26 @@ export default {
 
     let body;
     try {
-      body = await request.json();
+      const reader = request.body?.getReader();
+      if (!reader) return json({ error: 'Invalid JSON' }, 400, corsOrigin);
+      const chunks = [];
+      let size = 0;
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        size += value.byteLength;
+        if (size > 20000) {
+          await reader.cancel();
+          return json({ error: 'Request too large' }, 413, corsOrigin);
+        }
+        chunks.push(value);
+      }
+      body = JSON.parse(await new Blob(chunks).text());
     } catch {
       return json({ error: 'Invalid JSON' }, 400, corsOrigin);
+    }
+    if (!body || typeof body !== 'object' || Array.isArray(body)) {
+      return json({ error: 'Invalid request' }, 400, corsOrigin);
     }
 
     if (clean(body.website, 100)) return json({ ok: true }, 202, corsOrigin);
@@ -75,7 +92,7 @@ export default {
     if (!name || !country || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return json({ error: 'Required fields are invalid' }, 400, corsOrigin);
     }
-    if (!body.consent) return json({ error: 'Consent is required' }, 400, corsOrigin);
+    if (body.consent !== true) return json({ error: 'Consent is required' }, 400, corsOrigin);
     if (!cities.length && !customCity) return json({ error: 'Preferred city is required' }, 400, corsOrigin);
     if (!validDate(travelStart) || !validDate(travelEnd) || (travelStart && travelEnd && travelEnd < travelStart)) {
       return json({ error: 'Travel dates are invalid' }, 400, corsOrigin);

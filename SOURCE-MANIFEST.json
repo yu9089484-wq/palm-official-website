@@ -1,13 +1,13 @@
 [
   {
     "path": "web/index.html",
-    "bytes": 56426,
-    "sha256": "4871ec21d056bb43a332271775ddb98a47b30c04a71c3a8d3e92d0dbd129ef50"
+    "bytes": 56555,
+    "sha256": "c17b7712c3c0e3f00c855ecd1db600f1dadcd7a01c1efc4d1fd163e5b8d29a2f"
   },
   {
     "path": "web/styles.css",
-    "bytes": 29051,
-    "sha256": "61c661ed055139ec1443c82001143be3242f1a388dc399318f9b1f21dd8d387e"
+    "bytes": 29122,
+    "sha256": "9ea2a85a4c9fdedbb6f3ec8d299f5a3849c6acf5a9924882f4ffbff377621146"
   },
   {
     "path": "web/layout-reference.css",
@@ -81,8 +81,8 @@
   },
   {
     "path": "web/lead-config.js",
-    "bytes": 192,
-    "sha256": "ab921736a0d9b52d320f4a3a8dbd705ca78143487dd2b4dfb3d49845d95863f4"
+    "bytes": 247,
+    "sha256": "1b0d35874b3a9c96a68406542e985d1f2597ea7c1ea62f96f7b6b97575fdb86b"
   },
   {
     "path": "web/app.js",
@@ -196,8 +196,8 @@
   },
   {
     "path": "web/assets/palm-medical-travel-web.mp4",
-    "bytes": 35663762,
-    "sha256": "2628c102a1447e2aac2da994d8ef89774d4656d248909246ab4a422249a89507"
+    "bytes": 8390152,
+    "sha256": "df76903e28392115c95822b0469a78f0574eb77909e2f6d7177ad9b8ff5d521d"
   },
   {
     "path": "web/assets/deck/service-team.png",
@@ -286,8 +286,8 @@
   },
   {
     "path": "lead-api/README.md",
-    "bytes": 1661,
-    "sha256": "791cf2ece1668edfd7442cc4649e9b2614668615ee565b7dd5d6e6dc56d13f3d"
+    "bytes": 1439,
+    "sha256": "f90ad684bd5edd92561b30f224709a09d7b9c91e5c9c8e3f1c7d3b12f9a163f9"
   },
   {
     "path": "lead-api/package.json",
@@ -296,8 +296,8 @@
   },
   {
     "path": "lead-api/worker/index.js",
-    "bytes": 4418,
-    "sha256": "75191357f2c641a99959d992b9425b00060f979409ad487a0eef886eddaf9fb3"
+    "bytes": 5068,
+    "sha256": "4ec2bd420ae1a042a01074bb5ff740e3c69b8cb489fa15bc2d47b40aff625373"
   },
   {
     "path": "lead-api/drizzle/0000_create_leads.sql",
@@ -311,7 +311,7 @@
   },
   {
     "path": "lead-api/tests/worker.test.mjs",
-    "bytes": 5392,
-    "sha256": "1ff165028ccfe23e046adf7a7920916514ad2ffa6e5bbde4d24a64460dfe4d05"
+    "bytes": 5914,
+    "sha256": "2255b52653ec5bc8f3c77a77ed88aa292035ddac39a1605f55d83d09224f86c8"
   }
 ]
