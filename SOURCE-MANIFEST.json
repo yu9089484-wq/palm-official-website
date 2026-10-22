@@ -1,0 +1,317 @@
+[
+  {
+    "path": "web/index.html",
+    "bytes": 56426,
+    "sha256": "4871ec21d056bb43a332271775ddb98a47b30c04a71c3a8d3e92d0dbd129ef50"
+  },
+  {
+    "path": "web/styles.css",
+    "bytes": 29051,
+    "sha256": "61c661ed055139ec1443c82001143be3242f1a388dc399318f9b1f21dd8d387e"
+  },
+  {
+    "path": "web/layout-reference.css",
+    "bytes": 4415,
+    "sha256": "1ae82c766838044fec3155f0675b6676f5f9c4095b3cc98c517b7ff0f3260066"
+  },
+  {
+    "path": "web/mobile-compact.css",
+    "bytes": 7741,
+    "sha256": "5b8d0629aa0454b59bc23c160c781fa65128a14dc6ffa631ec85fa22f6f310f2"
+  },
+  {
+    "path": "web/english.css",
+    "bytes": 131,
+    "sha256": "5a94d4e793328b3c4030c46a7716b900638c6124ca8a1f40b92df8cc038eb008"
+  },
+  {
+    "path": "web/service-bubbles.css",
+    "bytes": 3375,
+    "sha256": "60571ad7560408a8a733e7105ad70aad2f81ea79f341a1618e3870bdc1ae75e4"
+  },
+  {
+    "path": "web/mobile-app.css",
+    "bytes": 8162,
+    "sha256": "1b9a7c1ac2abc5217be7efc787a6c489932f629c9fa7b0d98fef60d702d06e41"
+  },
+  {
+    "path": "web/button-confetti.css",
+    "bytes": 825,
+    "sha256": "30c39170a16ef7d658f8c4b9561979950e2c8aed04e294e1c3a460050ce9013e"
+  },
+  {
+    "path": "web/needs-presets.css",
+    "bytes": 2455,
+    "sha256": "c5fce54220d4527b621d3e420df251954a9cd764395fe78c7adf592072e12761"
+  },
+  {
+    "path": "web/scroll-experience.css",
+    "bytes": 5564,
+    "sha256": "70be767870107bbc62f438745478c5ad4194c8e48b9a70b5e13b1fffc7d99c0d"
+  },
+  {
+    "path": "web/needs-reference.css",
+    "bytes": 4201,
+    "sha256": "d794a310a6dd4d911427bfa766491d08b4096b318bf8207f2945787f4240de75"
+  },
+  {
+    "path": "web/city-illustrations.css",
+    "bytes": 1541,
+    "sha256": "f298c7e784085cf939de46ffabda2ae6d60cbca137d8f8ea5ed6e23ce46136df"
+  },
+  {
+    "path": "web/video-frame.css",
+    "bytes": 5990,
+    "sha256": "8079abfc86d45d7bad055a5c73468860ab28bb4a01c99fda0476457360a28734"
+  },
+  {
+    "path": "web/about-gallery.css",
+    "bytes": 5237,
+    "sha256": "80359ea1693f5a4f1b38530a663e689e816f0f923a2609cc1b6fbea1696e4fe1"
+  },
+  {
+    "path": "web/english-copy.js",
+    "bytes": 13884,
+    "sha256": "1c227080408a0b63a6f6b84215b6dbb0fe887f3fcfac4f00690a4a40afdb7923"
+  },
+  {
+    "path": "web/english.js",
+    "bytes": 3966,
+    "sha256": "326eb7f97a9d8a6f8fd698369571fbca67282f9f36297c4acccf400a8e43f9e7"
+  },
+  {
+    "path": "web/lead-config.js",
+    "bytes": 192,
+    "sha256": "ab921736a0d9b52d320f4a3a8dbd705ca78143487dd2b4dfb3d49845d95863f4"
+  },
+  {
+    "path": "web/app.js",
+    "bytes": 19457,
+    "sha256": "347a3b3b860690121cc7b4b7a0941b9747af7028f77dcc56595491d3886f057a"
+  },
+  {
+    "path": "web/service-bubbles.js",
+    "bytes": 2803,
+    "sha256": "4fb5912040dcd10aaa3677f13517e7f965d5cee09d972d8f1c81f06bd0503823"
+  },
+  {
+    "path": "web/button-confetti.js",
+    "bytes": 6209,
+    "sha256": "f813b6980781f96c0c73bfcd400c2b7e613e7baf8ab151529438387cbb58774c"
+  },
+  {
+    "path": "web/needs-presets.js",
+    "bytes": 3902,
+    "sha256": "21be5c68f9fea05332a0fb07e435673842b03c1a252a9bb03b3318880cbfc86f"
+  },
+  {
+    "path": "web/scroll-experience.js",
+    "bytes": 4383,
+    "sha256": "92c8eb714c82440623fa6289f3a958ee958c9fc0cdf9e1abb1c1c76babf7cfc0"
+  },
+  {
+    "path": "web/video-frame.js",
+    "bytes": 4131,
+    "sha256": "0637b658ca7f00cd34459cd3732759db0d5e3216e8962cff10c9d309e1eb4cc8"
+  },
+  {
+    "path": "web/about-gallery.js",
+    "bytes": 5435,
+    "sha256": "6d8935b63295530200fef99714379bdd77c96e06f94b8fbd54328aa1e81ab2f9"
+  },
+  {
+    "path": "web/assets/deck/journey-guide.png",
+    "bytes": 180535,
+    "sha256": "cdfcc533a04bfa2a5e5e42709bf85f17d1f86234917f48c790bab56299df9538"
+  },
+  {
+    "path": "web/assets/about-01-macau.webp",
+    "bytes": 156896,
+    "sha256": "ac9f2ea00130b8658c7d365340109aa19d47213e47cdfb2ed0374d3ca03bf472"
+  },
+  {
+    "path": "web/assets/about-02-zhuhai.webp",
+    "bytes": 185960,
+    "sha256": "dd01b5b71c76cb6bc33379fdc962ec63f6b060f7c9134026986709af23385f0e"
+  },
+  {
+    "path": "web/assets/about-03-flavours.webp",
+    "bytes": 247538,
+    "sha256": "8e8638c668395c4074a12ee445282eccb0feb69df086f99f66c324195313a27b"
+  },
+  {
+    "path": "web/assets/about-04-dining.webp",
+    "bytes": 102446,
+    "sha256": "4568b922fb6cf5bd4cc3c63bd1948fd2ce4a19a47e6d36dca5a057801c144aaa"
+  },
+  {
+    "path": "web/assets/about-05-palace.webp",
+    "bytes": 263884,
+    "sha256": "53201ee734f265d47032e38ee96dc184a6308319c1d1971691e4fff7db336c1a"
+  },
+  {
+    "path": "web/assets/about-06-mountain.webp",
+    "bytes": 403530,
+    "sha256": "962058d70f6e39f254e8c84e753c232f3165db550c2bb807f56e29b82b2c0a72"
+  },
+  {
+    "path": "web/assets/about-07-waterfall.webp",
+    "bytes": 260610,
+    "sha256": "1ae3f8f159c8eac899f7a1a2794545abe066c56b30e9778f3b68ca5b4fe23335"
+  },
+  {
+    "path": "web/assets/about-08-guangzhou.webp",
+    "bytes": 71144,
+    "sha256": "6936d5835b0baaa80b8c38d6ba10488d22d99dc907ab4bc2efaed52e43559956"
+  },
+  {
+    "path": "web/assets/deck/needs-guide.png",
+    "bytes": 188725,
+    "sha256": "2a73259cb20e11c6ca9bc0048cc30a5c5c8d3ca6ad43a651127f9896542daa9e"
+  },
+  {
+    "path": "web/assets/deck/doctor-coordination.png",
+    "bytes": 145629,
+    "sha256": "074fc08e514fe76f85054064701462daa66804d1d02ccc33a2cafcf9d9b2534b"
+  },
+  {
+    "path": "web/assets/city-tourism-illustration.png",
+    "bytes": 2190432,
+    "sha256": "952e905a4543539fc8143cb92d74ff1a3dce8db088fa272ed21ad768389f55f4"
+  },
+  {
+    "path": "web/assets/city-medical-illustration.png",
+    "bytes": 2106904,
+    "sha256": "b9faf371d16316a72cabceedf2d5ca33944156a85be880db476dafca70cf5b27"
+  },
+  {
+    "path": "web/assets/deck/city-technology.jpg",
+    "bytes": 647084,
+    "sha256": "66eab435e301db37e97f5ebbc5a571e1868f6f52385a3733140e95ce97c1a5f8"
+  },
+  {
+    "path": "web/assets/palm-medical-travel-poster.jpg",
+    "bytes": 55906,
+    "sha256": "08b1d630f1b317e290eeee1abc56fd31079bfc5fd2a61a7d19a4501637a7fa56"
+  },
+  {
+    "path": "web/assets/palm-medical-travel-web.mp4",
+    "bytes": 35663762,
+    "sha256": "2628c102a1447e2aac2da994d8ef89774d4656d248909246ab4a422249a89507"
+  },
+  {
+    "path": "web/assets/deck/service-team.png",
+    "bytes": 158141,
+    "sha256": "94f9796bc9bee148a09a772e2bcfde6a3174fe19153978c2915f2352accd4c0a"
+  },
+  {
+    "path": "web/assets/service-heart-watercolor.png",
+    "bytes": 1378596,
+    "sha256": "efb49b94befeacd200607f30b8a00f92d64f20bc5a68471383e87f5c613909d0"
+  },
+  {
+    "path": "web/assets/service-cell-watercolor.png",
+    "bytes": 1392209,
+    "sha256": "9c6750199efac7aad27c6418ec453db3aa23e67694f9ef24362fb06f51afa1ac"
+  },
+  {
+    "path": "web/assets/service-brain-watercolor.png",
+    "bytes": 1699912,
+    "sha256": "ed9803933c9e9dc58fd4b087a7ca7961a66e5ac2c1dbb2f3ec5d468fcd52c4f3"
+  },
+  {
+    "path": "web/assets/service-metabolic-watercolor.png",
+    "bytes": 1585663,
+    "sha256": "08e4028ea9964be1bd767c4ef038cb28ffd20c25af8b304aae87852b8a9e3a24"
+  },
+  {
+    "path": "web/assets/service-digestive-watercolor.png",
+    "bytes": 1282135,
+    "sha256": "908767144ac3a81fb5c4dbfb02b002dcd0d44d42a450b1f07dbbed3afb9f3da3"
+  },
+  {
+    "path": "web/assets/service-tooth-watercolor.png",
+    "bytes": 1411270,
+    "sha256": "efb5d7eba9d3ca377f64971d10a65119dced5246eb898c0c46417547f574b854"
+  },
+  {
+    "path": "web/assets/service-joint-watercolor.png",
+    "bytes": 1202972,
+    "sha256": "7f4b8d4a181aeaecd57c4583d3b1d08536b8643051272b68a29629ac44918281"
+  },
+  {
+    "path": "web/assets/deck/privacy-control.png",
+    "bytes": 151874,
+    "sha256": "cdc65c6e715be134d23c2821f21c98ab71607478554ed9c8a765a6a7223cd4c0"
+  },
+  {
+    "path": "web/assets/deck/cost-source.png",
+    "bytes": 150216,
+    "sha256": "5b50c14c1ae63aed42de1548e97d4f0ebb3e8cc0ab576aa65c158dace74f2bf2"
+  },
+  {
+    "path": "web/assets/deck/cost-clarity.png",
+    "bytes": 203184,
+    "sha256": "978feb2138f158f0e283a75904faec0eeee33c54a11099a9067b33e14caa1fcf"
+  },
+  {
+    "path": "web/assets/deck/cost-optional.png",
+    "bytes": 147931,
+    "sha256": "0018e132e234f5ecde53118ca7f0d5d067df2757b7c8f710ed08d36a1b71d7ca"
+  },
+  {
+    "path": "web/assets/medical.jpg",
+    "bytes": 274329,
+    "sha256": "c0fd7b921f17a8505899a0139adabe3329f6ea6497537ec79a5bdf648ca48b10"
+  },
+  {
+    "path": "web/assets/food.jpg",
+    "bytes": 209179,
+    "sha256": "858431f58b20243abde9aeb89644e8b7b270223062a3b124b88454cf550e1e5c"
+  },
+  {
+    "path": "web/assets/hengqin.jpg",
+    "bytes": 297879,
+    "sha256": "086c87c3578ee73adcc724fa799c9ba8fc9535e167fb32a8376de7919e697e73"
+  },
+  {
+    "path": "web/assets/macau.jpg",
+    "bytes": 243698,
+    "sha256": "3176f571a0b513defcb6f4d61f189c5d0366e8f9cfae021d24fbe7c53fb99410"
+  },
+  {
+    "path": "web/assets/hongkong.jpg",
+    "bytes": 401776,
+    "sha256": "0bce9fe940dc01d0895f80fffcf292ee85691df377bb04c520f20891d1f929e0"
+  },
+  {
+    "path": "lead-api/README.md",
+    "bytes": 1661,
+    "sha256": "791cf2ece1668edfd7442cc4649e9b2614668615ee565b7dd5d6e6dc56d13f3d"
+  },
+  {
+    "path": "lead-api/package.json",
+    "bytes": 177,
+    "sha256": "8f1784069e649a55e8976a256c7eda0978ba8a561f6d72390abac9e77536720a"
+  },
+  {
+    "path": "lead-api/worker/index.js",
+    "bytes": 4418,
+    "sha256": "75191357f2c641a99959d992b9425b00060f979409ad487a0eef886eddaf9fb3"
+  },
+  {
+    "path": "lead-api/drizzle/0000_create_leads.sql",
+    "bytes": 510,
+    "sha256": "f8381c2348a1c68794d2a81752b788ee4f826bce550edeb9469463de99682d55"
+  },
+  {
+    "path": "lead-api/drizzle/0001_add_journey_request.sql",
+    "bytes": 195,
+    "sha256": "5572c560dc1a1528db0eec8b9056217e982971258109214cbaff46d9a957b2e3"
+  },
+  {
+    "path": "lead-api/tests/worker.test.mjs",
+    "bytes": 5392,
+    "sha256": "1ff165028ccfe23e046adf7a7920916514ad2ffa6e5bbde4d24a64460dfe4d05"
+  }
+]

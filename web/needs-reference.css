@@ -1,0 +1,49 @@
+/* Restore the reference slide's three explanatory rows. Editing lives in the enquiry dialog. */
+.needs-section { padding: 64px 0 52px; }
+.needs-section .needs-grid { display: grid; grid-template-columns: 132px minmax(0,1fr); gap: 34px 22px; align-items: center; }
+.needs-section .needs-heading { display: contents; }
+.needs-section .needs-heading h2 { grid-column: 1 / -1; grid-row: 1; padding-left: 42px; margin: 0; font: italic 400 clamp(32px,3vw,42px)/1.18 Arial,sans-serif; letter-spacing: -.8px; color: #173844; }
+.needs-section .needs-heading h2 em { display: inline; max-width: none; font: inherit; }
+.needs-section .needs-heading > img { display: block; position: static; opacity: 1; grid-column: 1; grid-row: 2; width: 132px; max-width: 100%; margin: 0; align-self: center; }
+.needs-explanation { grid-column: 2; grid-row: 2; display: grid; gap: 12px; min-width: 0; }
+.needs-info-row { display: grid; grid-template-columns: 210px minmax(0,1fr); align-items: center; min-height: 88px; border: 1px solid #d5dfed; border-radius: 5px; background: linear-gradient(90deg,#fff,rgba(237,243,251,.45)); }
+.needs-info-row:nth-child(2) { border-color: #eddecf; background: linear-gradient(90deg,#fff,rgba(249,240,229,.42)); }
+.needs-info-row h3 { font: 400 16px/1.35 Arial,sans-serif; text-align: center; color: #546c79; margin: 0; padding: 0 18px; border-right: 2px solid #95a9c5; }
+.needs-info-row:nth-child(2) h3 { border-color: #cfaa88; }
+.needs-info-row p { padding: 18px; margin: 0; font-size: 16px; line-height: 1.5; color: #546c79; }
+.needs-reference-note { grid-column: 1 / -1; grid-row: 3; border-top: 1px solid #dce4dd; padding-top: 10px; margin: 0; text-align: center; font-size: 11px; line-height: 1.5; color: #6a7f7b; }
+
+.lead-request-summary summary small { margin-left: 8px; color: #627568; font-size: 11px; font-weight: 400; }
+.lead-request-summary #journey-form { padding: 0 15px 15px; }
+.lead-request-summary #journey-form .needs-presets > label { font-size: 13px; }
+.lead-request-summary #journey-form .prompt-row { display: grid; grid-template-columns: 180px minmax(0,1fr); margin: 0; }
+.lead-request-summary #journey-form .prompt-row textarea,
+.lead-request-summary #journey-form .prompt-row select { border: 0; border-radius: 0; margin-top: 0; height: auto; }
+.lead-request-summary #journey-form .form-actions { display: flex; gap: 12px; }
+.lead-request-summary #journey-form .form-actions > p { font-size: 10px; }
+.lead-request-summary #journey-form .form-actions button { flex-shrink: 0; }
+.lead-request-summary #journey-form .form-status { font-size: 11px; line-height: 1.5; }
+
+@media (min-width: 681px) and (max-width: 980px) {
+  .needs-section .needs-grid { grid-template-columns: 110px minmax(0,1fr); gap: 28px 16px; }
+  .needs-info-row { grid-template-columns: 170px minmax(0,1fr); }
+  .needs-info-row h3, .needs-info-row p { font-size: 14px; }
+}
+@media (max-width: 680px) {
+  .needs-section { padding: 24px 16px; }
+  .needs-section .needs-grid { grid-template-columns: minmax(0,1fr) 66px; gap: 20px 10px; }
+  .needs-section .needs-heading h2 { grid-column: 1; grid-row: 1; padding-left: 0; font-size: 25px; letter-spacing: -.6px; }
+  .needs-section .needs-heading > img { grid-column: 2; grid-row: 1; width: 66px; }
+  .needs-explanation { grid-column: 1 / -1; grid-row: 2; gap: 9px; }
+  .needs-info-row { grid-template-columns: 100px minmax(0,1fr); min-height: 86px; }
+  .needs-info-row h3 { padding: 0 9px; text-align: left; font-size: 12px; line-height: 1.45; }
+  .needs-info-row p { padding: 12px 10px; font-size: 13px; line-height: 1.5; }
+  .needs-reference-note { font-size: 10px; text-align: left; }
+  .lead-request-summary #journey-form { padding: 0 10px 12px; }
+  .lead-request-summary #journey-form .prompt-row { grid-template-columns: minmax(0,1fr); }
+  .lead-request-summary #journey-form .prompt-row > span { border-right: 0; }
+  .lead-request-summary #journey-form .prompt-row textarea,
+  .lead-request-summary #journey-form .prompt-row select { border-top: 1px solid #d5dece; font-size: 16px; }
+  .lead-request-summary #journey-form .form-actions { flex-direction: column; }
+  .lead-request-summary summary small { display: block; margin: 5px 0 0 14px; }
+}

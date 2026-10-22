@@ -1,0 +1,9 @@
+{
+  "name": "palm-leads-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/worker.test.mjs"
+  }
+}

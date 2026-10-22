@@ -1,0 +1,27 @@
+/* Decorative click feedback; all original labels and layouts are retained. */
+:where(button, a[href], [role="button"]):not(:disabled):not([aria-disabled="true"]) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(button, .mobile-tabbar a, .quiet-link, .nav-journey, .lead-fab):not(:disabled):not([aria-disabled="true"]):active {
+    scale: .96;
+  }
+}
+
+.palm-click-confetti {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  pointer-events: none !important;
+  user-select: none;
+  z-index: 2147483647;
+}

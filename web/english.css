@@ -1,0 +1,2 @@
+/* Preserve the original secondary copy without repeating it in the English view. */
+.secondary-copy { display: none !important; }

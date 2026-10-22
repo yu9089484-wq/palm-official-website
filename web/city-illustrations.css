@@ -1,0 +1,49 @@
+/* Two calm illustrated scenes replace the photographic collage. */
+.city-collage.city-illustrations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3.5vw, 48px);
+  margin-top: 34px;
+}
+.city-illustrations > figure[hidden] { display: none; }
+.city-collage.city-illustrations > figure:nth-child(n) {
+  height: clamp(260px, 30vw, 370px);
+  min-width: 0;
+  margin: 0;
+  transform: none;
+  border: 0;
+  border-radius: 28px;
+  background: radial-gradient(ellipse, rgba(255,255,251,.5), rgba(255,255,251,0) 72%);
+  box-shadow: none;
+}
+.city-illustrations img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  object-fit: contain;
+  filter: none;
+}
+.city-collage.city-illustrations > .interactive-image:hover { box-shadow: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .city-illustrations .interactive-image img {
+    transform: translate3d(calc(var(--image-x,0px) * .4),calc(var(--scroll-drift,0px) * .5),0) scale(1);
+  }
+  .city-illustrations .interactive-image:hover img { transform: translate3d(calc(var(--image-x,0px) * .4),calc(var(--image-y,0px) * .4),0) scale(1.02); }
+}
+@media (max-width: 680px) {
+  .city-collage.city-illustrations {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+    padding-bottom: 10px;
+    overflow-x: auto;
+  }
+  .city-collage.city-illustrations > figure:nth-child(n) {
+    flex: 0 0 88%;
+    height: clamp(180px, 54vw, 230px);
+    border-radius: 18px;
+    scroll-snap-align: start;
+  }
+  .city-illustrations img { padding: 4px; }
+}

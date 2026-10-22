@@ -1,0 +1,27 @@
+.needs-presets { padding: 16px; margin-bottom: 14px; border: 1px solid #d5dece; border-radius: 14px; background: #f1f5ec; }
+.needs-presets > label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: #234d3e; }
+.needs-presets select { width: 100%; min-height: 44px; border: 1px solid #bfcfba; border-radius: 10px; padding: 10px; color: #234d3e; background: #fffef9; font-size: 14px; }
+.needs-presets p { font-size: 11px; line-height: 1.5; margin: 8px 0 0; color: #627568; }
+#journey-form .prompt-row select { min-height: 50px; color: #234d3e; }
+#journey-form .form-actions { flex-wrap: wrap; }
+#journey-form .form-actions button { min-height: 46px; border-radius: 10px; }
+.lead-request-summary { grid-column: 1 / -1; margin: 0 0 6px; border: 1px solid #d5dece; border-radius: 12px; background: #f1f5ec; color: #234d3e; }
+.lead-request-summary[hidden] { display: none; }
+.lead-request-summary summary { padding: 13px 15px; min-height: 44px; cursor: pointer; font-size: 13px; font-weight: 600; }
+.lead-request-summary > p { padding: 0 15px; font-size: 13px; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; }
+.lead-request-summary dl { padding: 0 15px 15px; margin: 0; font-size: 12px; line-height: 1.5; }
+.lead-request-summary dl > div { display: grid; grid-template-columns: 108px 1fr; gap: 8px; margin-top: 8px; }
+.lead-request-summary dt { color: #627568; }
+.lead-request-summary dd { margin: 0; overflow-wrap: anywhere; }
+.needs-suggestions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.needs-suggestions button { border: 1px solid #cbd5c8; border-radius: 20px; padding: 8px 11px; min-height: 44px; background: #f4f6ef; color: #4e695e; font-size: 11px; }
+.needs-suggestions button[aria-pressed="true"] { background: #234d3e; color: #fffef9; border-color: #234d3e; }
+.needs-presets select:focus-visible, .needs-suggestions button:focus-visible, .lead-request-summary summary:focus-visible { outline: 2px solid #64836c; outline-offset: 3px; }
+@media (max-width: 680px) {
+  .needs-presets { padding: 12px; }
+  .needs-presets select, #journey-form .prompt-row select { font-size: 16px; }
+  #journey-form .prompt-row select { padding: 12px; border-top: 1px solid #d5dece; }
+  #journey-form .form-actions { display: flex; flex-direction: column; align-items: stretch; }
+  #journey-form .form-actions button { width: 100%; }
+  #journey-form .form-status { font-size: 11px; line-height: 1.5; }
+}

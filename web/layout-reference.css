@@ -1,0 +1,133 @@
+/* CanvasCode layout reference, 2026-10-14. All existing copy remains in HTML. */
+[data-layout-hidden] { display: none !important; }
+
+.hero-content { margin-top: -20px; }
+.hero h1 { margin-top: 0; }
+
+/* Replace the editor's large negative offsets with a two-column layout. */
+.statement {
+  grid-template-columns: minmax(260px, .82fr) minmax(0, 1.18fr);
+  grid-template-rows: auto auto 1fr;
+  column-gap: clamp(36px, 4vw, 64px);
+  row-gap: 38px;
+  padding-block: 100px;
+  align-items: start;
+}
+.statement-copy { display: contents; }
+.statement h2 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: min(100%, 908px);
+  height: auto;
+  line-height: 1.12;
+}
+.statement-copy > .body-copy:not(.zh) {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 510px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.journey-cards {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-self: start;
+  padding-top: 0;
+  gap: 18px;
+  min-width: 0;
+}
+.journey-card,
+.journey-card.featured {
+  width: auto;
+  height: auto;
+  min-height: 340px;
+  padding: 26px 22px;
+  transform: none;
+}
+.journey-card h3 {
+  font-size: 23px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 28px 0 22px;
+}
+.journey-card p { font-size: 15px; line-height: 1.65; }
+.floating-illustration {
+  position: static;
+  display: block;
+  grid-column: 1;
+  grid-row: 3;
+  width: 180px;
+  margin: 0 0 0 20px;
+  transform: none;
+}
+
+.needs-grid { gap: clamp(40px, 6vw, 90px); }
+.needs-heading h2 em { display: inline-block; max-width: 313px; }
+.prompt-row { min-height: 98px; }
+.prompt-row > span { min-height: 98px; }
+.prompt-row:last-of-type { border-bottom: 1px solid #c6d0c3; }
+.form-actions p { max-width: 321px; width: 100%; height: auto; }
+
+.privacy-grid {
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 45px 64px;
+  align-items: start;
+}
+.privacy-intro { grid-column: 1; grid-row: 1; }
+.privacy-points { grid-column: 2; grid-row: 1 / 3; align-self: start; }
+.privacy-grid > img {
+  position: static;
+  display: block;
+  grid-column: 1;
+  grid-row: 2;
+  width: min(205px, 60%);
+  margin: 0 auto;
+  transform: none;
+}
+.service-grid li:last-child {
+  grid-column: 1 / -1;
+  border-right: 0;
+}
+.service-grid li:nth-last-child(2) { border-bottom: 1px solid #cad5c7; }
+.footer-contact { grid-template-columns: 1fr; }
+.footer-contact > a { grid-column: 1; }
+
+@media (max-width: 1120px) {
+  .statement { grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr); gap: 32px; }
+  .journey-card, .journey-card.featured { padding: 24px 18px; }
+  .journey-card h3 { font-size: 21px; }
+  .privacy-grid { column-gap: 36px; }
+}
+@media (max-width: 980px) {
+  .statement { grid-template-columns: 1fr 180px; gap: 30px; padding-block: 80px; }
+  .statement h2 { grid-column: 1 / -1; }
+  .statement-copy > .body-copy:not(.zh) { grid-column: 1; grid-row: 2; }
+  .floating-illustration { grid-column: 2; grid-row: 2; width: 150px; margin: 0; align-self: center; }
+  .journey-cards { grid-column: 1 / -1; grid-row: 3; }
+  .journey-card, .journey-card.featured { min-height: 300px; }
+  .privacy-grid { grid-template-columns: 1fr 180px; }
+  .privacy-intro { grid-column: 1; grid-row: 1; }
+  .privacy-grid > img { grid-column: 2; grid-row: 1; width: 170px; margin: 0; align-self: center; }
+  .privacy-points { grid-column: 1 / -1; grid-row: 2; }
+}
+@media (max-width: 680px) {
+  .statement { grid-template-columns: 1fr; gap: 28px; padding-block: 70px; }
+  .statement h2 { grid-column: 1; font-size: clamp(32px, 8.5vw, 42px); letter-spacing: -1.4px; }
+  .statement-copy > .body-copy:not(.zh) { grid-column: 1; font-size: 16px; }
+  .floating-illustration { grid-column: 1; grid-row: 3; width: 135px; margin: 0; }
+  .journey-cards { grid-column: 1; grid-row: 4; gap: 16px; margin: 0; padding: 0; width: 100%; }
+  .journey-card, .journey-card.featured { min-width: min(78vw, 300px); min-height: 300px; }
+  .needs-heading h2 em { max-width: min(313px, 100%); }
+  .prompt-row > span { min-height: 70px; }
+  .privacy-grid { grid-template-columns: 1fr; gap: 28px; }
+  .privacy-intro { grid-column: 1; grid-row: 1; }
+  .privacy-grid > img { grid-column: 1; grid-row: 2; width: 155px; margin: 0; }
+  .privacy-points { grid-column: 1; grid-row: 3; width: 100%; margin: 0; }
+  .service-grid li:last-child { grid-column: 1; }
+}
+.gallery[hidden] { display: none; }
+@media (min-width: 681px) {
+  .site-footer { padding-bottom: 88px; }
+}
