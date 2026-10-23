@@ -1,0 +1,95 @@
+/* Brand typography sample: masthead, home and about only; original copy untouched. */
+@font-face {
+  font-family:"Manrope";
+  src:url("assets/fonts/Manrope-Variable.ttf") format("truetype");
+  font-style:normal;
+  font-weight:200 800;
+  font-display:swap;
+}
+:root { --palm-brand-type:"Manrope",Arial,"Microsoft JhengHei",sans-serif; }
+.site-header, .mobile-tabbar, #home, #about { font-family:var(--palm-brand-type); }
+.site-header .wordmark {
+  font-family:var(--palm-brand-type); font-weight:650; font-size:26px;
+  letter-spacing:.12em; line-height:1; gap:0;
+}
+.site-header .wordmark > span { color:#889b73; margin-left:-.03em; }
+.site-header nav { font-size:10px; font-weight:650; letter-spacing:.09em; }
+.site-header .nav-journey { padding:13px 22px; border-color:#bac7b2; }
+.hero-content { width:min(100%,1000px); margin-top:-14px; }
+#home h1 {
+  font-family:var(--palm-brand-type); font-weight:580;
+  font-size:clamp(100px,12vw,166px); line-height:1;
+  letter-spacing:.13em; padding-left:.13em; margin:0 0 28px;
+  color:#214b3d;
+}
+#home .hero-tagline {
+  font-family:var(--palm-brand-type); font-size:clamp(25px,2.45vw,35px);
+  font-weight:450; letter-spacing:-.035em; line-height:1.5;
+}
+#home .hero-tagline em {
+  display:inline-block; margin-top:3px; font-family:Georgia,"Times New Roman",serif;
+  font-weight:400; font-size:1.4em; letter-spacing:-.025em; line-height:1.12;
+}
+#home .quiet-link {
+  font-family:var(--palm-brand-type); font-size:11px; font-weight:550;
+  letter-spacing:.035em; margin-top:40px; gap:22px; min-height:44px;
+  border-bottom-color:#9daf95;
+}
+#home .quiet-link b { font-size:16px; font-weight:400; }
+#about.statement { row-gap:32px; }
+#about #statement-title {
+  font-family:var(--palm-brand-type); font-size:clamp(28px,2.75vw,38px);
+  font-weight:500; line-height:1.3; letter-spacing:-.04em;
+  width:100%; max-width:1080px; padding:0; margin:0; text-wrap:pretty;
+}
+#about #statement-title > br { display:none; }
+#about #statement-title > em {
+  display:block; margin-top:9px; max-width:100%;
+  font-family:Georgia,"Times New Roman",serif; font-weight:400;
+  font-size:clamp(38px,4.1vw,57px); line-height:1.16; letter-spacing:-.04em;
+  text-wrap:balance;
+}
+#about .statement-copy > .body-copy:not(.zh) {
+  font-family:var(--palm-brand-type); font-size:16px; font-weight:400;
+  line-height:1.85; letter-spacing:-.015em; color:#546d60; max-width:43ch;
+}
+#about .journey-cards { gap:16px; }
+#about .journey-card, #about .journey-card.featured {
+  padding:24px; border-radius:22px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 7px 22px -18px rgba(31,65,44,.25);
+}
+#about .journey-card h3 {
+  font-family:var(--palm-brand-type); font-size:21px; font-weight:650;
+  letter-spacing:-.035em; line-height:1.3; margin:10px 0 12px;
+}
+#about .journey-card p {
+  font-family:var(--palm-brand-type); font-size:14px; font-weight:400;
+  letter-spacing:-.012em; line-height:1.8; color:#526b5d;
+}
+#about .journey-card > span {
+  font-family:var(--palm-brand-type); font-style:normal; font-size:10px;
+  font-weight:600; letter-spacing:.08em; font-variant-numeric:tabular-nums; color:#788b72;
+}
+#about .about-photo-count { font-family:var(--palm-brand-type); font-size:10px; font-weight:500; letter-spacing:.08em; }
+.mobile-tabbar > a { font-weight:650; letter-spacing:.015em; }
+@media (max-width:680px) {
+  .site-header .wordmark { font-size:23px; letter-spacing:.13em; }
+  .site-header .menu-toggle { font-family:var(--palm-brand-type); font-size:9px; font-weight:600; letter-spacing:.12em; }
+  .site-header .nav-journey { padding:12px; }
+  #home.hero { min-height:clamp(390px,61svh,530px); }
+  #home .hero-content { padding:34px 22px; margin-top:0; }
+  #home h1 { font-size:clamp(69px,21.5vw,94px); letter-spacing:.105em; padding-left:.105em; margin:0 0 24px; font-weight:580; }
+  #home .hero-tagline { font-size:clamp(17px,4.7vw,21px); font-weight:500; line-height:1.6; letter-spacing:-.04em; }
+  #home .hero-tagline em { margin-top:5px; font-size:1.75em; letter-spacing:-.035em; line-height:1.12; }
+  #home .quiet-link { margin-top:29px; font-size:10px; gap:21px; }
+  #about.statement { padding:32px 22px 34px; row-gap:23px; }
+  #about #statement-title { font-size:clamp(18px,5.2vw,23px); font-weight:500; line-height:1.4; letter-spacing:-.045em; }
+  #about #statement-title > em { font-size:clamp(26px,7.7vw,32px); line-height:1.17; margin-top:7px; letter-spacing:-.035em; }
+  #about .statement-copy > .body-copy:not(.zh) { font-size:15px; line-height:1.75; max-width:none; }
+  #about .journey-cards { gap:12px; }
+  #about .journey-card, #about .journey-card.featured { padding:18px 20px; row-gap:9px; border-radius:20px; }
+  #about .journey-card h3 { font-size:19px; line-height:1.35; margin:0; font-weight:650; }
+  #about .journey-card p { font-size:14px; line-height:1.75; }
+  #about .journey-card > span { font-size:10px; }
+  .mobile-tabbar > a { font-size:8.5px; }
+}
