@@ -1,5 +1,15 @@
 [
   {
+    "path": "lead-api/README.md",
+    "bytes": 1439,
+    "sha256": "f90ad684bd5edd92561b30f224709a09d7b9c91e5c9c8e3f1c7d3b12f9a163f9"
+  },
+  {
+    "path": "lead-api/SUBSCRIPTIONS.md",
+    "bytes": 1462,
+    "sha256": "4f06a9299b53e69cd08511fb3cc24de474b3af31ed7b738391b43e2f2e0cbfa4"
+  },
+  {
     "path": "lead-api/drizzle/0000_create_leads.sql",
     "bytes": 510,
     "sha256": "f8381c2348a1c68794d2a81752b788ee4f826bce550edeb9469463de99682d55"
@@ -10,14 +20,19 @@
     "sha256": "5572c560dc1a1528db0eec8b9056217e982971258109214cbaff46d9a957b2e3"
   },
   {
+    "path": "lead-api/drizzle/0002_create_newsletter_subscribers.sql",
+    "bytes": 345,
+    "sha256": "3357759ccff2df044ff2bc18478d6c358329c11d3b7d475aac3a0b54614984f6"
+  },
+  {
     "path": "lead-api/package.json",
     "bytes": 177,
     "sha256": "8f1784069e649a55e8976a256c7eda0978ba8a561f6d72390abac9e77536720a"
   },
   {
-    "path": "lead-api/README.md",
-    "bytes": 1439,
-    "sha256": "f90ad684bd5edd92561b30f224709a09d7b9c91e5c9c8e3f1c7d3b12f9a163f9"
+    "path": "lead-api/tests/subscriptions.test.mjs",
+    "bytes": 1899,
+    "sha256": "a0abffcd8cff029e42a52da7eee4d966887fda4c4e3c0c9311e202e8a85740d5"
   },
   {
     "path": "lead-api/tests/worker.test.mjs",
@@ -26,8 +41,8 @@
   },
   {
     "path": "lead-api/worker/index.js",
-    "bytes": 5068,
-    "sha256": "4ec2bd420ae1a042a01074bb5ff740e3c69b8cb489fa15bc2d47b40aff625373"
+    "bytes": 5991,
+    "sha256": "7efaee7f58c5d84fb6a9fc16314e640061c3d416fd8ee17d1b65f24c89900e94"
   },
   {
     "path": "web/about-gallery.css",
@@ -160,6 +175,16 @@
     "sha256": "94f9796bc9bee148a09a772e2bcfde6a3174fe19153978c2915f2352accd4c0a"
   },
   {
+    "path": "web/assets/fonts/Manrope-OFL.txt",
+    "bytes": 4387,
+    "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+  },
+  {
+    "path": "web/assets/fonts/Manrope-Variable.ttf",
+    "bytes": 164700,
+    "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
+  },
+  {
     "path": "web/assets/food.jpg",
     "bytes": 209179,
     "sha256": "858431f58b20243abde9aeb89644e8b7b270223062a3b124b88454cf550e1e5c"
@@ -240,6 +265,11 @@
     "sha256": "efb5d7eba9d3ca377f64971d10a65119dced5246eb898c0c46417547f574b854"
   },
   {
+    "path": "web/brand-type-sample.css",
+    "bytes": 4897,
+    "sha256": "e8eb6cd721df5b1a79e9c8774e239c41ce61d78be4bdf67e912b1a39fc82cf27"
+  },
+  {
     "path": "web/button-confetti.css",
     "bytes": 825,
     "sha256": "30c39170a16ef7d658f8c4b9561979950e2c8aed04e294e1c3a460050ce9013e"
@@ -281,8 +311,8 @@
   },
   {
     "path": "web/index.html",
-    "bytes": 59582,
-    "sha256": "0bf6c3e97eb2c70a604ea8895f615d461c625199ea801a63aefbf61ce3d26c54"
+    "bytes": 61466,
+    "sha256": "9f8fc8370722804266bc482ab4e6eb5a7f78012c3a5e621bc4bf104f66745a49"
   },
   {
     "path": "web/layout-reference.css",
@@ -291,8 +321,8 @@
   },
   {
     "path": "web/lead-config.js",
-    "bytes": 247,
-    "sha256": "1b0d35874b3a9c96a68406542e985d1f2597ea7c1ea62f96f7b6b97575fdb86b"
+    "bytes": 354,
+    "sha256": "22f3b5f8769e2a720fddee4f9b7a2a0dedb602d3ee3f56bc99a02bb1715385d9"
   },
   {
     "path": "web/mobile-app.css",
@@ -330,6 +360,16 @@
     "sha256": "d794a310a6dd4d911427bfa766491d08b4096b318bf8207f2945787f4240de75"
   },
   {
+    "path": "web/newsletter.css",
+    "bytes": 4020,
+    "sha256": "c5c4362f27c1c1342614352b36031b1969378eabb74c2b52479b2804e0cf8c2e"
+  },
+  {
+    "path": "web/newsletter.js",
+    "bytes": 2709,
+    "sha256": "7ec2cb53e51a5673a21948733f3192fb1a54a6da5bdee1ec9491c24b24e66d14"
+  },
+  {
     "path": "web/scroll-experience.css",
     "bytes": 5564,
     "sha256": "70be767870107bbc62f438745478c5ad4194c8e48b9a70b5e13b1fffc7d99c0d"
@@ -363,20 +403,5 @@
     "path": "web/video-frame.js",
     "bytes": 5364,
     "sha256": "1cebd8fb61352b4882fad4939e51dda7acc099b472b450af2bad6774d6c0fa43"
-  },
-  {
-    "path": "web/brand-type-sample.css",
-    "bytes": 4897,
-    "sha256": "e8eb6cd721df5b1a79e9c8774e239c41ce61d78be4bdf67e912b1a39fc82cf27"
-  },
-  {
-    "path": "web/assets/fonts/Manrope-Variable.ttf",
-    "bytes": 164700,
-    "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
-  },
-  {
-    "path": "web/assets/fonts/Manrope-OFL.txt",
-    "bytes": 4387,
-    "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
   }
 ]

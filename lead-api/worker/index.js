@@ -18,8 +18,10 @@ export default {
     const requestOrigin = request.headers.get('origin') || '';
     const allowedOrigin = env.ALLOWED_ORIGIN || url.origin;
     const corsOrigin = requestOrigin === allowedOrigin ? requestOrigin : '';
+    const isSubscription = url.pathname === '/api/subscriptions';
+    const isSubmissionRoute = url.pathname === '/api/leads' || isSubscription;
 
-    if (request.method === 'OPTIONS' && url.pathname === '/api/leads') {
+    if (request.method === 'OPTIONS' && isSubmissionRoute) {
       if (!corsOrigin) return new Response(null, { status: 403 });
       return new Response(null, {
         status: 204,
@@ -36,7 +38,7 @@ export default {
     if (request.method === 'GET' && url.pathname === '/health') {
       return json({ ok: true, service: 'palm-leads' }, 200, corsOrigin);
     }
-    if (request.method !== 'POST' || url.pathname !== '/api/leads') {
+    if (request.method !== 'POST' || !isSubmissionRoute) {
       return json({ error: 'Not found' }, 404, corsOrigin);
     }
     if (!env.DB) return json({ error: 'Database unavailable' }, 503, corsOrigin);
@@ -72,6 +74,19 @@ export default {
     const startedAt = Number(body.startedAt || 0);
     if (!Number.isFinite(startedAt) || Date.now() - startedAt < 1200) {
       return json({ error: 'Please try again' }, 429, corsOrigin);
+    }
+
+    if (isSubscription) {
+      if (typeof body.email !== 'string' || body.email.trim().length > 120 ||
+          !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(body.email.trim())) {
+        return json({ error: 'A valid email is required' }, 400, corsOrigin);
+      }
+      if (body.consent !== true) return json({ error: 'Consent is required' }, 400, corsOrigin);
+      const subscribedAt = new Date().toISOString();
+      await env.DB.prepare(
+        'INSERT INTO newsletter_subscribers (id, email, subscribed_at, consent_at, consent_version, status) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(email) DO NOTHING'
+      ).bind('sub_' + crypto.randomUUID(), body.email.trim().toLowerCase(), subscribedAt, subscribedAt, 'palm-updates-v1', 'subscribed').run();
+      return json({ ok: true }, 200, corsOrigin);
     }
 
     const name = clean(body.name, 80);
