@@ -45,34 +45,6 @@
     sections.forEach((section) => observer.observe(section));
   }
 
-  const form = document.querySelector('#journey-form');
-  const dialog = document.querySelector('#journey-result');
-  const status = document.querySelector('#form-status');
-  if (form && dialog) {
-    document.querySelector('#journey-continue').addEventListener('click', (event) => {
-      event.preventDefault();
-      const needs = document.querySelector('#guest-needs').value.trim();
-      const travel = document.querySelector('#guest-window').value;
-      const records = document.querySelector('#guest-records').value;
-      if (!needs || !travel || !records) {
-        clearMessage(status);
-        status.style.color = '';
-        document.querySelector(!needs ? '#guest-needs' : !travel ? '#guest-window' : '#guest-records').focus();
-        return;
-      }
-      setMessage(status, 'Your request is ready. Add your contact details to continue.');
-      status.style.color = '';
-      window.PALM_REQUEST?.refresh();
-      document.querySelector('#lead-request-summary').open = false;
-      document.querySelector('#lead-email').focus();
-    });
-    dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-    dialog.querySelector('.dialog-done').addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', (event) => {
-      if (event.target === dialog) dialog.close();
-    });
-  }
-
   const track = document.querySelector('#gallery-track');
   const cards = track ? [...track.querySelectorAll('figure')] : [];
   const count = document.querySelector('#gallery-count');
@@ -115,9 +87,6 @@
     ? 'Your request will be sent with your contact details.'
     : 'Preview mode: no information will be sent. / 預覽模式：資料不會送出。';
   setMessage(leadStatus, leadReadyMessage());
-  setMessage(status, window.PALM_LEAD_ENDPOINT
-    ? 'Your request will be included with your contact details.'
-    : 'Preview only. No inquiry will be sent. / 僅供預覽，不會送出查詢。');
   const selectedCities = new Set();
   const syncCities = () => {
     document.querySelector('#lead-cities').value = [...selectedCities].join(' | ');

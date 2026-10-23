@@ -1,6 +1,6 @@
 # PALM publication configuration
 
-Published successfully on 2026-10-23. Website hosting version: 4. API hosting version: 2.
+Published successfully on 2026-10-23. Website hosting version: 5. API hosting version: 2.
 
 - Official website: https://palmjourney.com/
 - Original platform URL: https://palm-official.yu9089484.chatgpt.site
@@ -25,6 +25,8 @@ For future changes, update the frontend API URL, CSP `connect-src`, and API `ALL
 ## Source update — 2026-10-23
 
 The published version contains the reviewed mobile layout, four new visit photos (12 gallery photos total), a second compressed video, gentle automatic photo/video playback, pastel navigation icons, brand typography and the header subscription dialog. All seven services and three journey cards remain visible on mobile. Existing page text is preserved.
+
+Version 5 removes the three-row request editor (health needs, travel window and records status) and its obsolete preview action. Service examples now populate the existing editable notes field. Contact details, city/date selection, consent and submission remain available. Desktop and 390px mobile checks passed, and the published form opens without JavaScript errors.
 
 The domain is verified and HTTPS is active. Aliyun DNS has the two provider-required apex A records and ownership-validation TXT records; existing nameservers are unchanged. The canonical URL is https://palmjourney.com/. Only the apex hostname is configured; `www` is not currently bound.
 

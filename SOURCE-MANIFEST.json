@@ -61,8 +61,8 @@
   },
   {
     "path": "web/app.js",
-    "bytes": 19393,
-    "sha256": "6dac11718be1da107e5cae9fbf46975d771822bc37c8d979e9572d94a85339a6"
+    "bytes": 17843,
+    "sha256": "a10d6a967f0e548fa3643bca0d150b08b24f3f39189809519bbecca4abb3310e"
   },
   {
     "path": "web/assets/about-01-macau.webp",
@@ -316,8 +316,8 @@
   },
   {
     "path": "web/index.html",
-    "bytes": 61523,
-    "sha256": "e200afa90d67fba340845b6583060014948f91dc22c7b5c7d8e0b2942d516b58"
+    "bytes": 59054,
+    "sha256": "08d71f711971fd231c01f27aad0daa2fc2cc71ce114c42024b3d57572835bd24"
   },
   {
     "path": "web/layout-reference.css",
@@ -356,8 +356,8 @@
   },
   {
     "path": "web/needs-presets.js",
-    "bytes": 3902,
-    "sha256": "21be5c68f9fea05332a0fb07e435673842b03c1a252a9bb03b3318880cbfc86f"
+    "bytes": 3200,
+    "sha256": "736de1eca9af791498268ee85714e7cfad8ea93af862a20fa6e1c0b23c3f7b6b"
   },
   {
     "path": "web/needs-reference.css",

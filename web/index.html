@@ -326,7 +326,7 @@
         <div id="journey-form">
           <div class="needs-presets">
             <label for="service-example">Use a service example</label>
-            <select id="service-example" aria-describedby="service-example-help">
+            <select id="service-example">
               <option value="">Choose a service</option>
               <option value="cardiovascular">Heart &amp; vascular rehabilitation</option>
               <option value="cancer">Cancer care coordination</option>
@@ -336,38 +336,7 @@
               <option value="dental">Dental &amp; orthodontic care</option>
               <option value="joint">Joint health &amp; longevity</option>
             </select>
-            <p id="service-example-help">Choose an example to fill the fields below, then edit them to suit your needs.</p>
           </div>
-          <div class="demo-notice" data-layout-hidden><span data-layout-hidden>DEMO FORM / 模擬表單</span><p data-layout-hidden>Use fictional details only. Nothing is sent or saved.<br>請勿填寫真實個人或醫療資料；內容不會傳送或儲存。</p></div>
-          <label class="prompt-row">
-            <span><b>What would you like to address?</b><small data-layout-hidden>您希望處理甚麼需要？</small></span>
-            <textarea id="guest-needs" rows="2" maxlength="300" placeholder="Health goals, medical questions or practical needs during travel / 健康目標、醫療問題或旅程中的實際需要"></textarea>
-          </label>
-          <label class="prompt-row">
-            <span><b>When are you planning to travel?</b><small data-layout-hidden>您計劃何時出行？</small></span>
-            <select id="guest-window">
-              <option value="">Select a time / 選擇時間</option>
-              <option>Within 1-3 months / 1-3 個月內</option>
-              <option>Within 3-6 months / 3-6 個月內</option>
-              <option>Flexible / 時間彈性</option>
-            </select>
-          </label>
-          <label class="prompt-row">
-            <span><b>What records do you already have?</b><small data-layout-hidden>您目前已有甚麼資料？</small></span>
-            <select id="guest-records">
-              <option value="">Select an option</option>
-              <option value="unsure">Not sure yet</option>
-              <option>No records yet / 暫未有資料</option>
-              <option>Check-up reports / 體檢報告</option>
-              <option>Medical records / 病歷資料</option>
-              <option>Both / 兩者皆有</option>
-            </select>
-          </label>
-          <div class="form-actions">
-            <p>Existing reports or medical records can be submitted only after you give consent.<br><span>現有檢查報告或病歷只會在您授權後另行提交。</span></p>
-            <button type="button" id="journey-continue">Preview my journey <span data-layout-hidden>預覽旅程意向</span> ↗</button>
-          </div>
-          <p id="form-status" class="form-status" role="status" aria-live="polite">Preview only. No inquiry will be sent. / 僅供預覽，不會送出查詢。</p>
         </div>
       </details>
       <section class="lead-column" aria-labelledby="contact-details-title">

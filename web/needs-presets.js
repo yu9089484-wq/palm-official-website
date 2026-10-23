@@ -10,42 +10,27 @@
     joint: 'I would like help coordinating an assessment of joint health and suitable rehabilitation or longevity-related options.'
   };
   const service = document.querySelector('#service-example');
-  const needs = document.querySelector('#guest-needs');
-  const travel = document.querySelector('#guest-window');
-  const records = document.querySelector('#guest-records');
-  const summary = document.querySelector('#lead-request-summary');
+  const additional = document.querySelector('#lead-needs');
   const optionText = (select) => select.value ? select.selectedOptions[0].textContent.trim() : '';
-  const read = () => ({
-    serviceKey: service.value,
-    journeyNeeds: needs.value.trim(),
-    travelWindow: optionText(travel),
-    recordsStatus: optionText(records)
-  });
+  const read = () => ({ serviceKey: service.value });
   const refresh = () => {
     document.querySelector('#lead-request-selection').textContent = optionText(service);
   };
   window.PALM_REQUEST = Object.freeze({ read, refresh });
-  const resizeNeeds = () => {
-    needs.style.height = 'auto';
-    needs.style.height = `${Math.min(176, needs.scrollHeight)}px`;
-  };
+  let previousExample = '';
   service.addEventListener('change', () => {
-    if (!examples[service.value]) return;
-    needs.value = examples[service.value];
-    resizeNeeds();
-    if (!travel.value) travel.value = [...travel.options].find((option) => option.textContent.trim() === 'Flexible')?.value || '';
-    if (!records.value) records.value = 'unsure';
-    const status = document.querySelector('#form-status');
-    status.style.color = '';
-    status.textContent = 'Example added. Edit any answer, then preview your journey.';
+    const example = examples[service.value] || '';
+    const notes = previousExample ? additional.value.replace(previousExample, '').trim() : additional.value.trim();
+    const next = [example, notes].filter(Boolean).join('\n');
+    if (next.length <= additional.maxLength) {
+      additional.value = next;
+      previousExample = example;
+      additional.dispatchEvent(new Event('input', { bubbles: true }));
+    }
     refresh();
   });
-  [needs, travel, records].forEach((field) => field.addEventListener('input', refresh));
-  needs.addEventListener('input', resizeNeeds);
-  window.addEventListener('resize', resizeNeeds, { passive: true });
-  summary.addEventListener('toggle', () => { if (summary.open) resizeNeeds(); });
+  document.querySelector('#lead-form').addEventListener('reset', () => { previousExample = ''; });
 
-  const additional = document.querySelector('#lead-needs');
   const suggestions = [...document.querySelectorAll('[data-needs-example]')];
   const updateSuggestions = () => suggestions.forEach((button) => {
     button.setAttribute('aria-pressed', String(additional.value.includes(button.dataset.needsExample)));
