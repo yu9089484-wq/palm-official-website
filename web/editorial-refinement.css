@@ -70,11 +70,6 @@ h2, .needs-section .needs-heading h2 {
   .hero-tagline em {  margin-top:3px; }
   .quiet-link { margin-top:27px;  }
   #about.statement { padding:42px 24px 38px; row-gap:27px; }
-  .statement h2, .needs-section .needs-heading h2, .coordination h2,
-
-
-
-
   .coordination, .services, .costs, .needs-section, .privacy-section { padding:42px 24px; }
   #about .journey-cards { gap:12px; }
   #about .journey-card, #about .journey-card.featured { padding:20px; row-gap:9px; border-radius:20px; }
@@ -93,4 +88,24 @@ h2, .needs-section .needs-heading h2 {
 
   .mobile-tabbar { background:rgba(250,250,244,.93); border-color:rgba(255,255,255,.95); box-shadow:0 5px 30px -12px rgba(38,66,46,.26); }
 
+}
+
+/* Keep the opening statement compact, with an intro and a clear focal line. */
+@media (max-width:680px) {
+  #about.statement { padding:30px 22px 34px; row-gap:21px; }
+  #about #statement-title {
+    width:100%; max-width:none; min-width:0; height:auto;
+    padding:0; margin:0;
+    font-size:clamp(19px,5.1vw,23px); font-weight:400;
+    line-height:1.35; letter-spacing:-.55px; text-wrap:pretty;
+  }
+  #about #statement-title > br { display:none; }
+  #about #statement-title > em {
+    display:block; margin-top:6px;
+    font-size:clamp(26px,7.1vw,31px); line-height:1.18;
+    letter-spacing:-.65px; text-wrap:balance;
+  }
+  #about .statement-copy > .body-copy:not(.zh) {
+    width:100%; max-width:none; margin:0; font-size:15px; line-height:1.7;
+  }
 }
