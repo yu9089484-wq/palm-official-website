@@ -16,8 +16,8 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const requestOrigin = request.headers.get('origin') || '';
-    const allowedOrigin = env.ALLOWED_ORIGIN || url.origin;
-    const corsOrigin = requestOrigin === allowedOrigin ? requestOrigin : '';
+    const allowedOrigins = (env.ALLOWED_ORIGIN || url.origin).split(',').map(value => value.trim()).filter(Boolean);
+    const corsOrigin = allowedOrigins.includes(requestOrigin) ? requestOrigin : '';
     const isSubscription = url.pathname === '/api/subscriptions';
     const isSubmissionRoute = url.pathname === '/api/leads' || isSubscription;
 

@@ -23,7 +23,7 @@
 
 1. 网站发布目录选择 web/，不需要构建命令；同时上传其 assets/ 目录。不要把整仓库作为网站根目录。
 2. web/lead-config.js 已接入正式 API。只有正式官网来源可提交；本地设计预览时请将端点设为空。
-3. D1 数据库已绑定为 DB，两份 SQL 已应用；虚构测试资料已成功保存并回读核对。
+3. D1 数据库已绑定为 DB，三份 SQL 已应用；咨询与订阅分别保存，虚构测试资料已成功保存并回读核对。
 4. 更换域名时同时更新 ALLOWED_ORIGIN、前端接口地址和 CSP connect-src。
 5. 具体网站地址、项目标识和收件能力见 [DEPLOYMENT.md](DEPLOYMENT.md)。
 
@@ -35,8 +35,4 @@ GitHub 保存源码，Sites 托管网站；推送 GitHub 不会自动部署。�
 
 仓库包含用户提供的官网使用素材及项目已有插画，保留它们随网站发布所需的文件。原始桌面视频、PDF、聊天附件、浏览器资料、真实客户信息和登录凭证未包含在此源码快照中。
 
-2026-10-23 排版更新：统一标题与正文字体、字距、行距和留白，优化柔和玻璃卡片与表单细节；页面正文和交互结构逐字保持不变。已检查 320px、390px 手机及 1440px 桌面排版。本次为源码同步，尚未重新部署正式官网。
-
-按最新反馈恢复调整前的字体、字重、字号与文字间距，保留其余视觉布局。
-
-品牌字体小样：仅首页、介绍栏与导航采用本地 Manrope 可变字体，关键金句仍用 Georgia 斜体。原文字与页面结构未改，320px / 390px / 1440px 检查无横向溢出。字体来源：https://github.com/google/fonts/tree/main/ofl/manrope ，授权随 web/assets/fonts/Manrope-OFL.txt 分发。此版本为设计小样，未部署正式官网。
+2026-10-23 已发布至 https://palmjourney.com/ ，HTTPS 与域名验证均生效。首页、介绍栏与导航采用本地 Manrope 可变字体，关键金句保留 Georgia 斜体；原正文未改。手机布局、12 张轮播照片、两段视频和订阅组件已一并发布。字体来源：https://github.com/google/fonts/tree/main/ofl/manrope ，授权随 web/assets/fonts/Manrope-OFL.txt 分发。

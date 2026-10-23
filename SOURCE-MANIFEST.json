@@ -1,15 +1,5 @@
 [
   {
-    "path": "lead-api/README.md",
-    "bytes": 1439,
-    "sha256": "f90ad684bd5edd92561b30f224709a09d7b9c91e5c9c8e3f1c7d3b12f9a163f9"
-  },
-  {
-    "path": "lead-api/SUBSCRIPTIONS.md",
-    "bytes": 1462,
-    "sha256": "4f06a9299b53e69cd08511fb3cc24de474b3af31ed7b738391b43e2f2e0cbfa4"
-  },
-  {
     "path": "lead-api/drizzle/0000_create_leads.sql",
     "bytes": 510,
     "sha256": "f8381c2348a1c68794d2a81752b788ee4f826bce550edeb9469463de99682d55"
@@ -26,8 +16,23 @@
   },
   {
     "path": "lead-api/package.json",
-    "bytes": 177,
-    "sha256": "8f1784069e649a55e8976a256c7eda0978ba8a561f6d72390abac9e77536720a"
+    "bytes": 172,
+    "sha256": "74c735bf9dea578e990ef8e0dc32740dc327f9f71ef7bbe137385b9b5c94d252"
+  },
+  {
+    "path": "lead-api/README.md",
+    "bytes": 1439,
+    "sha256": "f90ad684bd5edd92561b30f224709a09d7b9c91e5c9c8e3f1c7d3b12f9a163f9"
+  },
+  {
+    "path": "lead-api/SUBSCRIPTIONS.md",
+    "bytes": 1781,
+    "sha256": "823af3948770e1edd6d39d232dcd2adc9bc4424498832e7c453e0903b6480946"
+  },
+  {
+    "path": "lead-api/tests/origins.test.mjs",
+    "bytes": 1122,
+    "sha256": "34d56a0194ded9a2ea7d391ce3cc8e090b94eb8d87ece6ffc6c325b2e032b1b5"
   },
   {
     "path": "lead-api/tests/subscriptions.test.mjs",
@@ -41,8 +46,8 @@
   },
   {
     "path": "lead-api/worker/index.js",
-    "bytes": 5991,
-    "sha256": "7efaee7f58c5d84fb6a9fc16314e640061c3d416fd8ee17d1b65f24c89900e94"
+    "bytes": 6055,
+    "sha256": "ced9356ff282c05c69f8137c0cb317ffd9a18b905dbf210fca2a4f0b154773bd"
   },
   {
     "path": "web/about-gallery.css",
@@ -311,8 +316,8 @@
   },
   {
     "path": "web/index.html",
-    "bytes": 61466,
-    "sha256": "9f8fc8370722804266bc482ab4e6eb5a7f78012c3a5e621bc4bf104f66745a49"
+    "bytes": 61523,
+    "sha256": "e200afa90d67fba340845b6583060014948f91dc22c7b5c7d8e0b2942d516b58"
   },
   {
     "path": "web/layout-reference.css",
@@ -321,8 +326,8 @@
   },
   {
     "path": "web/lead-config.js",
-    "bytes": 354,
-    "sha256": "22f3b5f8769e2a720fddee4f9b7a2a0dedb602d3ee3f56bc99a02bb1715385d9"
+    "bytes": 413,
+    "sha256": "3dc94a83b9536a637b7cda1bd0376a75846f6da09089bc6b6f6483744c2ce3d8"
   },
   {
     "path": "web/mobile-app.css",
