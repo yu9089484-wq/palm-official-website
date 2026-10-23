@@ -15,19 +15,29 @@
     "sha256": "3357759ccff2df044ff2bc18478d6c358329c11d3b7d475aac3a0b54614984f6"
   },
   {
+    "path": "lead-api/drizzle/0003_email_notifications.sql",
+    "bytes": 319,
+    "sha256": "ba924d501d5a4ed41274db0432a263a1db414a442b92cb353e0d68439055aa9d"
+  },
+  {
     "path": "lead-api/package.json",
     "bytes": 172,
     "sha256": "74c735bf9dea578e990ef8e0dc32740dc327f9f71ef7bbe137385b9b5c94d252"
   },
   {
     "path": "lead-api/README.md",
-    "bytes": 1439,
-    "sha256": "f90ad684bd5edd92561b30f224709a09d7b9c91e5c9c8e3f1c7d3b12f9a163f9"
+    "bytes": 2409,
+    "sha256": "022d48858cbf97584284ea2e7fb62973b2578e036a810362be792dfd114da11a"
   },
   {
     "path": "lead-api/SUBSCRIPTIONS.md",
-    "bytes": 1781,
-    "sha256": "823af3948770e1edd6d39d232dcd2adc9bc4424498832e7c453e0903b6480946"
+    "bytes": 2188,
+    "sha256": "644bd114ef815874fbc825963cfffad6c99a40e69f5bdfcefd532915ed03f70e"
+  },
+  {
+    "path": "lead-api/tests/notifications.test.mjs",
+    "bytes": 4162,
+    "sha256": "7c02247a42a205941892cb1f5df8d03a33b30a67e30dcf7f789c4037f21c2c5a"
   },
   {
     "path": "lead-api/tests/origins.test.mjs",
@@ -46,8 +56,8 @@
   },
   {
     "path": "lead-api/worker/index.js",
-    "bytes": 6055,
-    "sha256": "ced9356ff282c05c69f8137c0cb317ffd9a18b905dbf210fca2a4f0b154773bd"
+    "bytes": 9449,
+    "sha256": "ecd24fefc84fcc6e4ab0cc28b75bf5a40880612c078ae19718497e8b4429b465"
   },
   {
     "path": "web/about-gallery.css",

@@ -12,8 +12,60 @@ const json = (body, status = 200, origin = '') => new Response(JSON.stringify(bo
 const clean = (value, max) => typeof value === 'string' ? value.trim().slice(0, max) : '';
 const validDate = (value) => !value || /^\d{4}-\d{2}-\d{2}$/.test(value);
 
+// Credentials and the fixed recipient are server-only runtime settings.
+async function notifyOwner(env, { id, kind, text, replyTo }) {
+  if (!env.RESEND_API_KEY || !env.NOTIFICATION_FROM || !env.NOTIFICATION_TO) return;
+  const notificationId = `${kind}_${id}`;
+  try {
+    await env.DB.prepare(
+      'INSERT INTO email_notifications (id, record_id, kind, status, created_at) VALUES (?, ?, ?, ?, ?)'
+    ).bind(notificationId, id, kind, 'pending', new Date().toISOString()).run();
+    let status = 'failed';
+    let providerId = null;
+    let failure = 'network_error';
+    try {
+      const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${env.RESEND_API_KEY}`,
+          'Content-Type': 'application/json',
+          'Idempotency-Key': notificationId
+        },
+        body: JSON.stringify({
+          from: env.NOTIFICATION_FROM,
+          to: [env.NOTIFICATION_TO],
+          reply_to: replyTo,
+          subject: kind === 'lead' ? 'PALM | New website enquiry' : 'PALM | New newsletter subscriber',
+          text
+        }),
+        signal: AbortSignal.timeout(10000)
+      });
+      const data = await response.json().catch(() => ({}));
+      if (response.ok && typeof data.id === 'string') {
+        status = 'accepted';
+        providerId = data.id;
+        failure = null;
+      } else {
+        // Never store provider error bodies: they may echo customer data or secrets.
+        failure = `http_${response.status}`;
+      }
+    } catch { /* Keep the saved enquiry and mark the notification for follow-up. */ }
+    await env.DB.prepare(
+      'UPDATE email_notifications SET status = ?, provider_id = ?, error_code = ?, updated_at = ? WHERE id = ?'
+    ).bind(status, providerId, failure, new Date().toISOString(), notificationId).run();
+  } catch {
+    console.error('PALM notification processing failed; submitted record remains stored.');
+  }
+}
+
+async function scheduleNotification(env, ctx, message) {
+  const task = notifyOwner(env, message);
+  if (ctx?.waitUntil) ctx.waitUntil(task);
+  else await task;
+}
+
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const requestOrigin = request.headers.get('origin') || '';
     const allowedOrigins = (env.ALLOWED_ORIGIN || url.origin).split(',').map(value => value.trim()).filter(Boolean);
@@ -83,9 +135,17 @@ export default {
       }
       if (body.consent !== true) return json({ error: 'Consent is required' }, 400, corsOrigin);
       const subscribedAt = new Date().toISOString();
-      await env.DB.prepare(
+      const subscriberId = 'sub_' + crypto.randomUUID();
+      const subscriberEmail = body.email.trim().toLowerCase();
+      const saved = await env.DB.prepare(
         'INSERT INTO newsletter_subscribers (id, email, subscribed_at, consent_at, consent_version, status) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(email) DO NOTHING'
-      ).bind('sub_' + crypto.randomUUID(), body.email.trim().toLowerCase(), subscribedAt, subscribedAt, 'palm-updates-v1', 'subscribed').run();
+      ).bind(subscriberId, subscriberEmail, subscribedAt, subscribedAt, 'palm-updates-v1', 'subscribed').run();
+      if (Number(saved?.meta?.changes ?? saved?.changes ?? 0) > 0) {
+        await scheduleNotification(env, ctx, {
+          id: subscriberId, kind: 'subscription', replyTo: subscriberEmail,
+          text: `A visitor subscribed to PALM updates.\n\nEmail: ${subscriberEmail}\nConsent recorded: ${subscribedAt}\nReference: ${subscriberId}`
+        });
+      }
       return json({ ok: true }, 200, corsOrigin);
     }
 
@@ -124,6 +184,19 @@ export default {
       travelWindow || null, recordsStatus || null
     ).run();
 
+    await scheduleNotification(env, ctx, {
+      id, kind: 'lead', replyTo: email,
+      text: [
+        'A new enquiry was submitted on the PALM website.', '',
+        `Reference: ${id}`, `Submitted: ${createdAt}`, `Name: ${name}`,
+        `Email: ${email}`, `Country: ${country}`, `Phone / WhatsApp: ${whatsapp || 'Not provided'}`,
+        `Preferred cities: ${[...cities, customCity].filter(Boolean).join(', ')}`,
+        `Travel dates: ${travelStart || 'Flexible'} — ${travelEnd || 'Flexible'}`,
+        `Service: ${serviceKey || 'Not specified'}`, '', 'Guest notes:', needs || 'Not provided',
+        ...(journeyNeeds ? ['', 'Additional request:', journeyNeeds] : []),
+        '', 'Reply to this email to contact the guest. The original enquiry is saved in the PALM database.'
+      ].join('\n')
+    });
     return json({ ok: true, id }, 201, corsOrigin);
   }
 };
