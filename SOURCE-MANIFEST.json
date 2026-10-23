@@ -1,10 +1,5 @@
 [
   {
-    "path": "lead-api/README.md",
-    "bytes": 1439,
-    "sha256": "f90ad684bd5edd92561b30f224709a09d7b9c91e5c9c8e3f1c7d3b12f9a163f9"
-  },
-  {
     "path": "lead-api/drizzle/0000_create_leads.sql",
     "bytes": 510,
     "sha256": "f8381c2348a1c68794d2a81752b788ee4f826bce550edeb9469463de99682d55"
@@ -18,6 +13,11 @@
     "path": "lead-api/package.json",
     "bytes": 177,
     "sha256": "8f1784069e649a55e8976a256c7eda0978ba8a561f6d72390abac9e77536720a"
+  },
+  {
+    "path": "lead-api/README.md",
+    "bytes": 1439,
+    "sha256": "f90ad684bd5edd92561b30f224709a09d7b9c91e5c9c8e3f1c7d3b12f9a163f9"
   },
   {
     "path": "lead-api/tests/worker.test.mjs",
@@ -260,6 +260,11 @@
     "sha256": "f298c7e784085cf939de46ffabda2ae6d60cbca137d8f8ea5ed6e23ce46136df"
   },
   {
+    "path": "web/editorial-refinement.css",
+    "bytes": 7075,
+    "sha256": "7f362c3bdaf3ddb866523e55e93d52b1a06606d9e6804abfb33d2f1b4ad51dc0"
+  },
+  {
     "path": "web/english-copy.js",
     "bytes": 13884,
     "sha256": "1c227080408a0b63a6f6b84215b6dbb0fe887f3fcfac4f00690a4a40afdb7923"
@@ -276,8 +281,8 @@
   },
   {
     "path": "web/index.html",
-    "bytes": 59471,
-    "sha256": "db205a4904000b05cb52cbd2d018018cd7e51bf1bd19cf6d2de4615da9c29e2e"
+    "bytes": 59529,
+    "sha256": "558441d8da7af7feb1ad6bfec504037b4f8c6b898cacc2d51511bee3eaafd7bf"
   },
   {
     "path": "web/layout-reference.css",
