@@ -6,6 +6,10 @@
     element.dataset.i18nMessage = source;
     element.textContent = translate(source);
   };
+  const clearMessage = (element) => {
+    delete element.dataset.i18nMessage;
+    element.textContent = '';
+  };
 
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('#navigation');
@@ -51,8 +55,8 @@
       const travel = document.querySelector('#guest-window').value;
       const records = document.querySelector('#guest-records').value;
       if (!needs || !travel || !records) {
-        setMessage(status, 'Please describe your needs and choose a travel window and records status.');
-        status.style.color = '#a4483c';
+        clearMessage(status);
+        status.style.color = '';
         document.querySelector(!needs ? '#guest-needs' : !travel ? '#guest-window' : '#guest-records').focus();
         return;
       }
@@ -157,8 +161,7 @@
     validateCountry();
     if (!leadForm.checkValidity()) {
       leadForm.reportValidity();
-      setMessage(leadStatus, 'Please complete the required fields. / 請完成所有必填欄位。');
-      leadStatus.classList.add('error');
+      clearMessage(leadStatus);
       return;
     }
     const customCity = document.querySelector('#lead-custom-city').value.trim();

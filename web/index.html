@@ -296,7 +296,7 @@
       <p class="section-index">PRIVATE JOURNEY / 私人旅程</p>
       <h2 id="lead-title">Tell us what you need<small>請填寫您的需求</small></h2>
     </div>
-    <form id="lead-form" class="lead-form" autocomplete="on" novalidate>
+    <form id="lead-form" class="lead-form" autocomplete="off" novalidate>
       <input class="lead-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <input id="lead-started-at" type="hidden" name="startedAt">
       <details class="lead-request-summary" id="lead-request-summary">
@@ -350,8 +350,8 @@
       </details>
       <section class="lead-column" aria-labelledby="contact-details-title">
         <h3 id="contact-details-title"><span>01</span> How may we contact you?<small>我們可以如何與您聯絡？</small></h3>
-        <label>Email / 電郵 <b>*</b><input id="lead-email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required maxlength="120"></label>
-        <label>Name / 姓名 <b>*</b><input id="lead-name" name="name" type="text" placeholder="Your name / 請輸入您的姓名" autocomplete="name" required maxlength="80"></label>
+        <label>Email / 電郵 <b>*</b><input id="lead-email" name="email" type="email" placeholder="name@example.com" autocomplete="off" required maxlength="120"></label>
+        <label>Name / 姓名 <b>*</b><input id="lead-name" name="name" type="text" placeholder="Your name / 請輸入您的姓名" autocomplete="off" required maxlength="80"></label>
         <label>Country or region / 國家或地區 <b>*</b><input id="lead-country" name="country" type="text" list="country-options" placeholder="Type or select / 輸入或選擇" autocomplete="country-name" required maxlength="80"><datalist id="country-options">
           <option data-region-code="CN" value="中國內地 / Mainland China"></option>
           <option data-region-code="HK" value="香港 / Hong Kong"></option>
@@ -603,7 +603,7 @@
           <option data-region-code="ZM" value="Zambia / 尚比亞"></option>
           <option data-region-code="ZW" value="Zimbabwe / 辛巴威"></option>
         </datalist></label>
-        <label>WhatsApp / 電話<input id="lead-whatsapp" name="whatsapp" type="tel" placeholder="+86 / +853 / +852" autocomplete="tel" maxlength="40"></label>
+        <label>WhatsApp / 電話<input id="lead-whatsapp" name="whatsapp" type="tel" placeholder="+86 / +853 / +852" autocomplete="off" maxlength="40"></label>
       </section>
       <section class="lead-column" aria-labelledby="journey-details-title">
         <h3 id="journey-details-title"><span>02</span> Your journey<small>您的旅程</small></h3>
