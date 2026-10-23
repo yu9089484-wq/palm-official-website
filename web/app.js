@@ -334,7 +334,7 @@
   'use strict';
   const phone = window.matchMedia('(max-width: 680px)');
   const reducedReadingMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const disclosures = [...document.querySelectorAll('.role-table article, .privacy-points article')]
+  const disclosures = [...document.querySelectorAll('.role-table article, .privacy-points article, .needs-info-row')]
     .map((article, index) => ({
       article,
       heading: article.querySelector('strong, h3'),

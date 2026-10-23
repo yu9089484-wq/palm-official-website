@@ -14,6 +14,10 @@
   let userPaused = false;
   let userStarted = false;
   let pendingPlay = false;
+  let playbackGeneration = 0;
+  const playlist = frame.querySelector('.video-playlist');
+  const choices = [...frame.querySelectorAll('.video-choice')];
+  let activeVideo = 0;
 
   video.muted = true;
   video.defaultMuted = true;
@@ -33,18 +37,42 @@
   const play = async () => {
     if (pendingPlay || !shouldPlay()) return;
     pendingPlay = true;
+    const generation = playbackGeneration;
     try {
       await video.play();
+      if (generation !== playbackGeneration) return;
       // Do not start offscreen playback if the visitor scrolls away while loading.
       if (!shouldPlay()) video.pause();
     } catch {
       // Power-saving browsers may require a tap; the external play button remains available.
     } finally {
-      pendingPlay = false;
-      syncControls();
+      if (generation === playbackGeneration) {
+        pendingPlay = false;
+        syncControls();
+      }
     }
   };
   const syncPlayback = () => shouldPlay() ? play() : video.pause();
+  const selectVideo = (index, fromClick = false) => {
+    const choice = choices[index];
+    if (!choice) return;
+    playbackGeneration++;
+    pendingPlay = false;
+    video.pause();
+    activeVideo = index;
+    video.poster = choice.querySelector('img').getAttribute('src');
+    video.src = choice.dataset.video;
+    video.setAttribute('aria-label', `PALM medical travel film ${index + 1}`);
+    choices.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
+    if (fromClick) { userPaused = false; userStarted = true; }
+    video.load();
+    syncPlayback();
+  };
+  choices.forEach((choice, index) => choice.addEventListener('click', () => selectVideo(index, true)));
+  if (playlist && choices.length > 1) playlist.hidden = false;
+  video.addEventListener('ended', () => {
+    if (choices.length > 1 && shouldPlay()) selectVideo((activeVideo + 1) % choices.length);
+  });
   toggle.addEventListener('click', () => {
     userPaused = !video.paused;
     if (!userPaused) { userStarted = true; inView = true; }

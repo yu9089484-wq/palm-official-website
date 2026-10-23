@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="city-illustrations.css">
   <link rel="stylesheet" href="video-frame.css">
   <link rel="stylesheet" href="about-gallery.css">
+  <link rel="stylesheet" href="mobile-comfort.css">
   <script src="english-copy.js" defer></script>
   <script src="english.js" defer></script>
   <script src="lead-config.js" defer></script>
@@ -29,6 +30,8 @@
   <script src="scroll-experience.js" defer></script>
   <script src="video-frame.js" defer></script>
   <script src="about-gallery.js" defer></script>
+  <script src="mobile-comfort.js" defer></script>
+  <script src="calm-carousel.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content / 跳至內容</a>
@@ -92,9 +95,13 @@
           <figure><img src="assets/about-06-mountain.webp" alt="A mountain arch with a long staircase through green cliffs" width="900" height="1122" loading="lazy" decoding="async" draggable="false"></figure>
           <figure><img src="assets/about-07-waterfall.webp" alt="Turquoise water, waterfalls and snow-covered mountains" width="900" height="1510" loading="lazy" decoding="async" draggable="false"></figure>
           <figure><img src="assets/about-08-guangzhou.webp" alt="A traveller looking at Canton Tower from a green lawn" width="900" height="1276" loading="lazy" decoding="async" draggable="false"></figure>
+          <figure class="about-photo-landscape"><img src="assets/about-09-visit-reception.jpg" alt="Three visitors beside reception signage" width="1925" height="1280" loading="lazy" decoding="async" draggable="false"></figure>
+          <figure class="about-photo-landscape"><img src="assets/about-10-visit-group.jpg" alt="A group visiting the ACECELL reception area" width="3840" height="2559" loading="lazy" decoding="async" draggable="false"></figure>
+          <figure class="about-photo-landscape"><img src="assets/about-11-visit-conversation.jpg" alt="Visitors listening to a staff member in a white coat" width="3008" height="2000" loading="lazy" decoding="async" draggable="false"></figure>
+          <figure class="about-photo-landscape"><img src="assets/about-12-visit-tour.jpg" alt="A staff member showing visitors an exhibition corridor" width="3008" height="2000" loading="lazy" decoding="async" draggable="false"></figure>
         </div>
         <div class="about-photo-controls" data-no-confetti hidden>
-          <span class="about-photo-count" aria-live="polite" aria-atomic="true">01 / 08</span>
+          <span class="about-photo-count" aria-live="polite" aria-atomic="true">01 / 12</span>
           <div class="about-photo-progress" aria-hidden="true"><span></span></div>
           <button type="button" class="about-photo-prev" aria-label="Previous photos" aria-controls="about-photos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
           <button type="button" class="about-photo-next" aria-label="Next photos" aria-controls="about-photos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
@@ -156,7 +163,7 @@
             </div>
           </header>
           <div class="video-frame-player">
-            <video id="palm-video" muted loop playsinline preload="none" poster="assets/palm-medical-travel-poster.jpg" aria-label="PALM medical travel film">
+            <video id="palm-video" muted playsinline preload="none" poster="assets/palm-medical-travel-poster.jpg" aria-label="PALM medical travel film">
               <source src="assets/palm-medical-travel-web.mp4" type="video/mp4">
               PALM medical travel film.
             </video>
@@ -172,6 +179,10 @@
             <button type="button" class="video-fullscreen" aria-label="View video fullscreen" title="View video fullscreen" aria-controls="palm-video">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>
             </button>
+          </div>
+          <div class="video-playlist" role="group" aria-label="Choose a video" data-no-confetti hidden>
+            <button type="button" class="video-choice" data-video="assets/palm-medical-travel-web.mp4" aria-label="Play video 1" aria-pressed="true" aria-controls="palm-video"><img src="assets/palm-medical-travel-poster.jpg" alt="" width="96" height="54"><span>01</span></button>
+            <button type="button" class="video-choice" data-video="assets/palm-medical-visit-web.mp4" aria-label="Play video 2" aria-pressed="false" aria-controls="palm-video"><img src="assets/palm-medical-visit-poster.jpg" alt="" width="96" height="54"><span>02</span></button>
           </div>
           <footer class="video-frame-footer">
             <p class="video-frame-themes">Scenic China <span>•</span> Savory China <span>•</span> Healing China</p>
@@ -271,10 +282,10 @@
   </footer>
 
   <nav class="mobile-tabbar" aria-label="Mobile navigation">
-    <a href="#home" class="active" aria-current="location"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span>HOME</span></a>
-    <a href="#services"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span>SERVICES</span></a>
-    <a href="#about"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10h.01"/></svg><span>ABOUT US</span></a>
-    <a href="#lead-form" class="mobile-private" data-open-lead><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M6 5h13v13"/></svg><span>PRIVATE JOURNEY</span></a>
+    <a href="#home" class="active" aria-current="location"><svg class="palm-nav-icon" width="26" height="26" viewBox="0 0 32 32" fill="none" stroke="#537461" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 14v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V14" fill="#F8EBD2"/><path d="m4.5 15 9.4-9.3a3 3 0 0 1 4.2 0l9.4 9.3" fill="#DBE9D5"/><path d="M12.5 28v-7a3.5 3.5 0 0 1 7 0v7" fill="#BAD4BD"/><path d="M16 16s-4-2.3-4-4.5a2.2 2.2 0 0 1 4-1 2.2 2.2 0 0 1 4 1c0 2.2-4 4.5-4 4.5Z" fill="#E7ADA0" stroke="none"/></svg><span>HOME</span></a>
+    <a href="#services"><svg class="palm-nav-icon" width="26" height="26" viewBox="0 0 32 32" fill="none" stroke="#537461" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 9V7a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v2"/><rect x="4" y="9" width="24" height="20" rx="6" fill="#D9E8D4"/><path d="M5 15h22" stroke="#AEC7B1"/><path d="M14 13h4v4h4v4h-4v4h-4v-4h-4v-4h4Z" fill="#FFFBF0" stroke="none"/><path d="m25 7-1.8-1.6a1.5 1.5 0 1 1 1.8-2.3 1.5 1.5 0 1 1 1.8 2.3Z" fill="#E7ADA0" stroke="none"/></svg><span>SERVICES</span></a>
+    <a href="#about"><svg class="palm-nav-icon" width="26" height="26" viewBox="0 0 32 32" fill="none" stroke="#537461" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M27.5 15c0 6-5 10-11.5 10a17 17 0 0 1-4-.5L6 28l1-6C5 20.2 4.5 17.5 4.5 15c0-6 5-10 11.5-10S27.5 9 27.5 15Z" fill="#F5E8CF"/><path d="M11.5 13.5v1m9-1v1" stroke-width="2"/><path d="M12.5 18a4.3 4.3 0 0 0 7 0"/><ellipse cx="9" cy="17" rx="2" ry="1.1" fill="#EAB8A8" stroke="none"/><ellipse cx="23" cy="17" rx="2" ry="1.1" fill="#EAB8A8" stroke="none"/><path d="M17 5c.5-3 3.5-3 5-2-1 3-3 4-5 2Z" fill="#AFCBA8"/></svg><span>ABOUT US</span></a>
+    <a href="#lead-form" class="mobile-private" data-open-lead><svg class="palm-nav-icon" width="26" height="26" viewBox="0 0 32 32" fill="none" stroke="#537461" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V5.5A1.5 1.5 0 0 1 13.5 4h5A1.5 1.5 0 0 1 20 5.5V8"/><rect x="6" y="8" width="20" height="20" rx="5" fill="#D6E6DE"/><path d="M10 29v1m12-1v1M10 11v13m12-13v13" stroke="#8CAD9A"/><path d="M16 23v-8m0 1c-4 1-5-1-5-2 3-1 4 0 5 2Zm0 0c0-4 3-5 5-3-1 3-3 4-5 3Z" fill="#A8C594"/><path d="m25 4 .7 1.8L28 6.5l-2.3.7L25 9l-.7-1.8-2.3-.7 2.3-.7Z" fill="#D8B66E" stroke="none"/></svg><span>PRIVATE JOURNEY</span></a>
   </nav>
 
   <dialog id="lead-dialog" class="lead-dialog" aria-labelledby="lead-title">

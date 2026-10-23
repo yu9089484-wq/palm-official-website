@@ -19,3 +19,7 @@ Two fictional verification rows exist: `PALM Launch Test (Fictional)` and `PALM 
 The live browser submission was confirmed in the database. All eight gallery photos loaded, the 115-second video played, the 390px viewport had no horizontal overflow, and browser error logs were empty. Seven API tests passed. The publication video is 1280×720, approximately 8 MB; the prior 35 MB version remains available in Git history and the original local preview assets.
 
 For future changes, update the frontend API URL, CSP `connect-src`, and API `ALLOWED_ORIGIN` together when binding a new domain. GitHub stores the source; hosting is managed through Sites. GitHub pushes alone do not deploy this website.
+
+## Source update — 2026-10-23
+
+The repository now contains the reviewed mobile layout, four new visit photos (12 gallery photos total), a second compressed video, gentle automatic photo/video playback, and pastel navigation icons. All seven services and three journey cards remain visible on mobile. Production enquiry endpoint and CSP are preserved. This source update has not been deployed to Sites; the hosted version above still describes the last publication.

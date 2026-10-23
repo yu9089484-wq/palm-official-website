@@ -79,3 +79,13 @@
   .video-frame-waves { height: 70px; opacity: .16; }
 }
 @media (prefers-reduced-motion: reduce) { .video-frame-controls button { transition: none; } }
+
+.video-playlist { display: flex; justify-content: center; gap: 12px; margin: 8px 0 12px; }
+.video-playlist[hidden] { display: none; }
+.video-choice { display: flex; align-items: center; gap: 12px; padding: 5px 14px 5px 5px; border: 1px solid rgba(111,137,112,.22); border-radius: 14px; color: #526c5d; background: rgba(255,255,255,.35); transition: background .25s, border-color .25s; }
+.video-choice img { width: 76px; height: 43px; object-fit: cover; border-radius: 9px; }
+.video-choice span { font: italic 14px Georgia,serif; }
+.video-choice[aria-pressed="true"] { border-color: #688b75; background: rgba(222,235,218,.7); box-shadow: inset 0 0 0 1px rgba(104,139,117,.22); color: #173f34; }
+.video-choice:hover { background: rgba(222,235,218,.55); }
+.video-choice:focus-visible { outline: 2px solid #64836c; outline-offset: 3px; }
+@media (prefers-reduced-motion:reduce) { .video-choice { transition: none; } }
